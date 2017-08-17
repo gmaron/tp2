@@ -1,0 +1,104 @@
+<html>
+    <head>
+        
+        <title>TP2</title>
+
+        <!-- JQuery -->
+        <script src="{{url_for('static', filename='jquery/jquery-3.2.1.min.js')}}"></script>        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}" />
+        <!-- Bootstrap JS -->
+        <script src="{{url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
+        <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+
+    </head>
+    <body>        
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">TP2</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Formulario <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://info.unlp.edu.ar/">Fac. Informática</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.ing.unlp.edu.ar/">Fac. Ingeniería</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Links de interés
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="https://ideas.info.unlp.edu.ar/">IdeasUNLP</a>
+                            <a class="dropdown-item" href="#">Otro..</a>                            
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h3 class="display-4">Taller de Proyecto II</h3>
+                <p class="lead">Ejemplo de teoría de Python</p>
+            </div>
+        </div>
+
+        <div class="container">
+
+
+            <h1>Formulario de registro</h1>
+            <form action="/form" method="POST">
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp" placeholder="Ingrese su nombre" required/>                
+                            <small id="nombreHelp" class="form-text text-muted">Aquí debe ingresar su nombre.</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="nombre">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" aria-describedby="apellidoHelp" placeholder="Ingrese su apellido" required/>                
+                            <small id="apellidoHelp" class="form-text text-muted">Aquí debe ingresar su apellido.</small>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="email@example.com" required>
+                            <small id="emailHelp" class="form-text text-muted">Aquí debe ingresar su email.</small>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="sexo">Example select</label>
+                            <select class="form-control" id="sexo" name="sexo" aria-describedby="sexoHelp"  required>
+                                <option value="" disabled hidden selected>Seleccione...</option>                        
+                                <option value="masc">Masculino</option>
+                                <option value="fem">Femenino</option>
+                            </select>
+                            <small id="sexoHelp" class="form-text text-muted">Seleccione su sexo.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit"  class="btn btn-primary" style="float: right;">Registrarme!</button>
+            </form>
+        </div>
+    </body>
+</html>
